@@ -1,0 +1,29 @@
+#
+rent_info:
+-C10003|2018:09:12:12:10
+-C10005|2018:09:10:11:11
+~
+admin_info:A10004
+ID:S00001
+region:BEI_CP
+sport:soccer
+intro:a popular sport named soccer
+enter_age:10
+rent:10.00
+total_profit:30.00
+order_num:2
+rent_info_len:2
+#
+rent_info:
+-C10003|2018:09:01:17:12
+~
+admin_info:A10004
+ID:S00003
+region:BEI_HD
+sport:basketball
+intro:a popular sport named basketball
+enter_age:15
+rent:12.34
+total_profit:24.68
+order_num:1
+rent_info_len:1
