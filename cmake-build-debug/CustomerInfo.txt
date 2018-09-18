@@ -13,7 +13,7 @@ region:BEI_CP
 balance:123.45
 age:15
 default_num:0
-rent_info_len:2
+rent_info_len:0
 #
 rent_info:
 -C10005|2018:09:10:11:11
@@ -28,7 +28,7 @@ region:BEI_HD
 balance:678.90
 age:18
 default_num:2
-rent_info_len:1
+rent_info_len:2
 #
 rent_info:
 ~
@@ -42,4 +42,4 @@ region:BEI_CY
 balance:234.56
 age:21
 default_num:1
-rent_info_len:0
+rent_info_len:1

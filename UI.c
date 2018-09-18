@@ -1,10 +1,4 @@
 #include "gym.h"
-void inter_main();
-void inter_cus_login(CustomerInfo * customerInfo);
-void inter_adm_login(AdminInfo * adminInfo);
-void reserve_management(AdminInfo * adminInfo);
-void count_order(AdminInfo * adminInfo);
-void site_management(AdminInfo * adminInfo);
 
 void inter_main(){
     CustomerInfo * customerInfo;
@@ -28,9 +22,7 @@ void inter_main(){
                 }
                 break;
             case 3:
-                if(Register()!=0){
-                    printf("register failed\n");
-                }
+                Register();
                 break;
             case 4:
                 break;
@@ -110,21 +102,21 @@ void count_order(AdminInfo * adminInfo){
     while((n = _get_int())!=7){
         switch(n){
             case 1:
-                qsort(adminInfo->site_info,adminInfo->site_info_len,sizeof(SiteInfo *),_comp_site_order_down);
+                qsort(adminInfo->site_info,(size_t)adminInfo->site_info_len,sizeof(SiteInfo *),_comp_site_order_down);
                 break;
             case 2:
-                qsort(adminInfo->site_info,adminInfo->site_info_len,sizeof(SiteInfo *),_comp_site_profit_down);
+                qsort(adminInfo->site_info,(size_t)adminInfo->site_info_len,sizeof(SiteInfo *),_comp_site_profit_down);
                 break;
             case 3:
-                qsort(adminInfo->site_info,adminInfo->site_info_len,sizeof(SiteInfo *),_comp_site_untilize_down);
+                qsort(adminInfo->site_info,(size_t)adminInfo->site_info_len,sizeof(SiteInfo *),_comp_site_untilize_down);
                 break;
             case 4:
                 printf("The total turnover is %.2lf.\n",get_venue_profit(adminInfo));
                 break;
             case 5:
-                qsort(adminInfo->site_info,adminInfo->site_info_len,sizeof(SiteInfo *),_comp_female_sport);
+                qsort(adminInfo->site_info,(size_t)adminInfo->site_info_len,sizeof(SiteInfo *),_comp_female_sport);
                 printf("the most popular sport in female: %s",adminInfo->site_info[0]->sport);
-                qsort(adminInfo->site_info,adminInfo->site_info_len,sizeof(SiteInfo *),_comp_male_sport);
+                qsort(adminInfo->site_info,(size_t)adminInfo->site_info_len,sizeof(SiteInfo *),_comp_male_sport);
                 printf("the most popular sport in male: %s",adminInfo->site_info[0]->sport);
                 break;
             case 6:
@@ -148,7 +140,7 @@ void site_management(AdminInfo * adminInfo){
                 adm_show_site(adminInfo);
                 break;
             case 2:
-                add_site();
+                RegisterSite(adminInfo);
                 break;
             case 3:
                 break;
@@ -159,15 +151,16 @@ void site_management(AdminInfo * adminInfo){
     }
 }
 
-void Resgister(){
+void Register(){
     int n;
     register_menu();
     while((n = getchar())!=3){
         switch(n){
             case 1:
-
+                RegisterCostumer();
                 break;
             case 2:
+                RegisterAdmin();
                 break;
             case 3:
                 break;

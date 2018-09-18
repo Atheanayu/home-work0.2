@@ -21,8 +21,12 @@ CustomerInfo * Login_user(){
             printf("sorry,your key is wrong,do you want to try again ?(yes-1 no-2)\n");
             scanf("%d",&choice);
             getchar();
-            if(choice != 1)
+            if(choice == 2)
                 break;
+            else if(choice != 1) {
+                printf("wrong choice\n");
+                break;
+            }
         }
     }
     if(i==3){
@@ -52,8 +56,12 @@ AdminInfo * Login_adm(){
             printf("sorry,your key is wrong,do you want to try again ?(yes-1 no-2)\n");
             scanf("%d",&choice);
             getchar();
-            if(choice != 1)
+            if(choice == 2)
                 break;
+            else if(choice != 1) {
+                printf("wrong choice\n");
+                break;
+            }
         }
     }
     if(i==3){
@@ -64,7 +72,7 @@ AdminInfo * Login_adm(){
 }
 
 int revise_customer_info(CustomerInfo * cos){
-    int choice,i;
+    int choice,i,choice1;
     char s[40];
     while(choice != 5){
         cos_modify_menu();
@@ -77,19 +85,24 @@ int revise_customer_info(CustomerInfo * cos){
                 getchar();
                 while(_check_phone(s)!=0){
                     printf("sorry,your phone number can not exist, do you want to try again?(yes-1 no-2)\n");
-                    scanf("%d",&choice);
+                    scanf("%d",&choice1);
                     getchar();
-                    if(choice != 1)
+                    if(choice1 == 2)
                         break;
+                    else if(choice1 != 1) {
+                        printf("wrong choice\n");
+                        break;
+                    }
                     printf("please enter your phone number:\n");
                     scanf("%s", s);
                     getchar();
                 }
-                strcpy(cos->phone_num,s);
+                if(_check_phone(s)==0)
+                    strcpy(cos->phone_num,s);
                 break;
             case 2:
-                printf("please enter your original key:\n");
                 for (i = 0; i < 3; i++) {
+                    printf("please enter your original key:\n");
                     scanf("%s", s);
                     getchar();
                     if (strcmp(s, cos->key) == 0) {
@@ -100,22 +113,33 @@ int revise_customer_info(CustomerInfo * cos){
                         getchar();
                         while(_check_password(s)!=0){
                             printf("sorry,your new key is not compatible,do you want to try again?(yes-1 no-2)\n");
-                            scanf("%d",&choice);
+                            scanf("%d",&choice1);
                             getchar();
-                            if(choice != 1)
+                            if(choice1 == 2)
                                 break;
+                            else if(choice1 !=1){
+                                printf("wrong choice\n");
+                                break;
+                            }
                             printf("please enter your new key:\n");
                             printf("(for security ,there has to be both number & alpha in new key"
                                            ",but no other word ,besides the key word can not less than 6)\n");
                             scanf("%s", s);
                             getchar();
                         }
+                        if(_check_password(s)==0)
+                            strcpy(cos->key,s);
+                        break;
                     } else {
                         printf("sorry, your key is wrong,do you want to try again?(yes-1 no-2)\n");
-                        scanf("%d", &choice);
+                        scanf("%d",&choice1);
                         getchar();
-                        if (choice != 1)
+                        if (choice1 == 2)
                             break;
+                        else if(choice1 != 1){
+                            printf("wrong choice\n");
+                            break;
+                        }
                     }
                 }
                 if (i == 3)
@@ -124,17 +148,20 @@ int revise_customer_info(CustomerInfo * cos){
             case 3:
                 printf("please enter your new e_mail\n");
                 scanf("%s", s);
+                strcpy(cos->e_mail,s);
                 getchar();
                 while(_check_mail(s)!=0) {
                     printf("sorry,your e_mail can not exist,do you want to try again?(yes-1 no-2)\n");
-                    scanf("%d",&choice);
+                    scanf("%d",&choice1);
                     getchar();
-                    if(choice != 1)
+                    if(choice1 == 2)
                         break;
+                    else if(choice1 != 1)
+                        printf("wrong choice\n");
                     printf("please enter your new e_mail\n");
-                    scanf("%s", s);
+                    scanf("%s",s);
                     getchar();
-                    strcpy(cos->e_mail, s);
+                    strcpy(cos->e_mail,s);
                 }
                 break;
             case 4:
@@ -147,12 +174,11 @@ int revise_customer_info(CustomerInfo * cos){
             default:
                 printf("wrong choice\n");
         }
-        cos_modify_menu();
     }
     return 0;
 }
 int revise_admin_info(AdminInfo * adm){
-    int choice,i;
+    int choice,i,choice1;
     char s[40];
     while(choice != 4){
         adm_modify_menu();
@@ -165,19 +191,24 @@ int revise_admin_info(AdminInfo * adm){
                 getchar();
                 while(_check_phone(s)!=0){
                     printf("sorry,your phone number can not exist, do you want to try again?(yes-1 no-2)\n");
-                    scanf("%d",&choice);
+                    scanf("%d",&choice1);
                     getchar();
-                    if(choice != 1)
+                    if(choice1 == 2)
                         break;
+                    else if(choice1 != 1){
+                        printf("wrong choice\n");
+                        break;
+                    }
                     printf("please enter your phone number:\n");
                     scanf("%s", s);
                     getchar();
                 }
-                strcpy(adm->phone_num,s);
+                if(_check_phone(s)==0)
+                    strcpy(adm->phone_num,s);
                 break;
             case 2:
-                printf("please enter your original key:\n");
                 for (i = 0; i < 3; i++) {
+                    printf("please enter your original key:\n");
                     scanf("%s", s);
                     getchar();
                     if (strcmp(s, adm->key) == 0) {
@@ -188,22 +219,31 @@ int revise_admin_info(AdminInfo * adm){
                         getchar();
                         while(_check_password(s)!=0){
                             printf("sorry,your new key is not compatible,do you want to try again?(yes-1 no-2)\n");
-                            scanf("%d",&choice);
+                            scanf("%d",&choice1);
                             getchar();
-                            if(choice != 1)
+                            if(choice1 == 2)
                                 break;
+                            else if(choice1 != 1){
+                                printf("wrong choice\n");
+                                break;
+                            }
                             printf("please enter your new key:\n");
                             printf("(for security ,there has to be both number & alpha in new key"
                                            ",but no other word ,besides the key word can not less than 6)\n");
                             scanf("%s", s);
                             getchar();
                         }
+                        if(_check_password(s)==0)
+                            strcpy(adm->key,s);
                     } else {
                         printf("sorry, your key is wrong,do you want to try again?(yes-1 no-2)\n");
-                        scanf("%d", &choice);
+                        scanf("%d", &choice1);
                         getchar();
-                        if (choice != 1)
+                        if (choice1 == 2)
                             break;
+                        else if(choice1 != 1){
+                            printf("wrong choice\n");
+                        }
                     }
                 }
                 if (i == 3)
@@ -215,10 +255,14 @@ int revise_admin_info(AdminInfo * adm){
                 getchar();
                 while(_check_mail(s)!=0) {
                     printf("sorry,your e_mail can not exist,do you want to try again?(yes-1 no-2)\n");
-                    scanf("%d",&choice);
+                    scanf("%d",&choice1);
                     getchar();
-                    if(choice != 1)
+                    if(choice1 == 2)
                         break;
+                    else if(choice1 != 1){
+                        printf("wrong choice\n");
+                        break;
+                    }
                     printf("please enter your new e_mail\n");
                     scanf("%s", s);
                     getchar();
@@ -236,28 +280,28 @@ int revise_admin_info(AdminInfo * adm){
 
 void cus_show_orders(CustomerInfo * cos){
     for(int i = 0;cos->rent_info[i]!=NULL;i++){
-        printf("site_ID\tAppoint_ID\tAppoint_time\tstart_date\tstart_time\tend_time\tprice\tis_intime\n");
+        printf("site_ID\tAppoint_ID\t\t\t\tAppoint_time\t\tstart_date\tstart_time\tend_time\tprice\tis_intime\n");
         printf("%s\t%s\t",cos->rent_info[i]->site_info->ID,cos->rent_info[i]->Appoint_ID);
         printf("%d:%02d:%02d:%02d:%02d\t ",cos->rent_info[i]->appoint_time[0],cos->rent_info[i]->appoint_time[1],cos->rent_info[i]->appoint_time[2],
                 cos->rent_info[i]->appoint_time[3],cos->rent_info[i]->appoint_time[4]);
         printf("%d:%02d:%02d\t",cos->rent_info[i]->start_date[0],cos->rent_info[i]->start_date[1],cos->rent_info[i]->start_date[2]);
-        printf("%d:%02d\t",cos->rent_info[i]->start_time[0],cos->rent_info[i]->start_time[1]);
-        printf("%d:%02d\t",cos->rent_info[i]->end_time[0],cos->rent_info[i]->end_time[1]);
+        printf("%d:%02d\t\t",cos->rent_info[i]->start_time[0],cos->rent_info[i]->start_time[1]);
+        printf("%d:%02d\t\t",cos->rent_info[i]->end_time[0],cos->rent_info[i]->end_time[1]);
         printf("%.2f\t%d\n",cos->rent_info[i]->price,cos->rent_info[i]->is_intime);
     }
 }
 void adm_show_orders(AdminInfo * adm){
     for(int j = 0;j<adm->site_info_len;j++){
         for(int i = 0;i<adm->site_info[j]->rent_info_len;i++) {
-            printf("site_ID\tAppoint_ID\tAppoint_time\tstart_date\tstart_time\tend_time\tprice\tis_intime\n");
+            printf("site_ID\tAppoint_ID\t\t\t\tAppoint_time\t\tstart_date\tstart_time\tend_time\tprice\tis_intime\n");
             printf("%s\t%s\t", adm->site_info[j]->ID, adm->site_info[j]->rent_info[i]->Appoint_ID);
             printf("%d:%02d:%02d:%02d:%02d\t ", adm->site_info[j]->rent_info[i]->appoint_time[0], adm->site_info[j]->rent_info[i]->appoint_time[1],
                    adm->site_info[j]->rent_info[i]->appoint_time[2],
                    adm->site_info[j]->rent_info[i]->appoint_time[3], adm->site_info[j]->rent_info[i]->appoint_time[4]);
             printf("%d:%02d:%02d\t", adm->site_info[j]->rent_info[i]->start_date[0], adm->site_info[j]->rent_info[i]->start_date[1],
                    adm->site_info[j]->rent_info[i]->start_date[2]);
-            printf("%d:%02d\t", adm->site_info[j]->rent_info[i]->start_time[0], adm->site_info[j]->rent_info[i]->start_time[1]);
-            printf("%d:%02d\t", adm->site_info[j]->rent_info[i]->end_time[0], adm->site_info[j]->rent_info[i]->end_time[1]);
+            printf("%d:%02d\t\t", adm->site_info[j]->rent_info[i]->start_time[0], adm->site_info[j]->rent_info[i]->start_time[1]);
+            printf("%d:%02d\t\t", adm->site_info[j]->rent_info[i]->end_time[0], adm->site_info[j]->rent_info[i]->end_time[1]);
             printf("%.2f\t%d\n", adm->site_info[j]->rent_info[i]->price, adm->site_info[j]->rent_info[i]->is_intime);
         }
     }
@@ -266,8 +310,8 @@ void adm_show_site(AdminInfo * adm){
     for(int i = 0;i< adm->site_info_len;i++){
         printf("\n");
         printf("Site Info:\n");
-        printf("ID\tvenue name\tregion\tsport\tenter age\trent\tintroduction\n");
-        printf("%s\t%s\t%s\t%s\t%d\t%.2f\t%s",adm->site_info[i]->ID,adm->venue_name,adm->site_info[i]->region,adm->site_info[i]->sport,
+        printf("ID\t\tvenue name\tregion\tsport\tenter age\trent\tintroduction\n");
+        printf("%s\t%s\t%s\t%s\t%d\t\t\t%.2f\t%s",adm->site_info[i]->ID,adm->venue_name,adm->site_info[i]->region,adm->site_info[i]->sport,
                 adm->site_info[i]->enter_age,adm->site_info[i]->rent,adm->site_info[i]->intro);
     }
 }
@@ -297,4 +341,5 @@ int cancel_order(){
         printf("your order can only be canceled in 24h");
         return -1;
     }
+    return 0;
 }

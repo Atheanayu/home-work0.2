@@ -123,6 +123,33 @@ Glutton_C6/fast:
 	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/build
 .PHONY : Glutton_C6/fast
 
+Register.o: Register.c.o
+
+.PHONY : Register.o
+
+# target to build an object file
+Register.c.o:
+	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/Register.c.o
+.PHONY : Register.c.o
+
+Register.i: Register.c.i
+
+.PHONY : Register.i
+
+# target to preprocess a source file
+Register.c.i:
+	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/Register.c.i
+.PHONY : Register.c.i
+
+Register.s: Register.c.s
+
+.PHONY : Register.s
+
+# target to generate assembly for a file
+Register.c.s:
+	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/Register.c.s
+.PHONY : Register.c.s
+
 UI.o: UI.c.o
 
 .PHONY : UI.o
@@ -429,6 +456,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Glutton_C6"
+	@echo "... Register.o"
+	@echo "... Register.i"
+	@echo "... Register.s"
 	@echo "... UI.o"
 	@echo "... UI.i"
 	@echo "... UI.s"

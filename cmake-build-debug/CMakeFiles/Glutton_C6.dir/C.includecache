@@ -6,7 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/athena/CLionProjects/Glutton_C6/Register.c
+gym.h
+/Users/athena/CLionProjects/Glutton_C6/gym.h
+
 /Users/athena/CLionProjects/Glutton_C6/UI.c
+gym.h
+/Users/athena/CLionProjects/Glutton_C6/gym.h
+
+/Users/athena/CLionProjects/Glutton_C6/add.c
 
 /Users/athena/CLionProjects/Glutton_C6/choice_relevant.c
 gym.h
@@ -37,6 +45,10 @@ stdlib.h
 -
 ctype.h
 -
+
+/Users/athena/CLionProjects/Glutton_C6/increase_room.c
+gym.h
+/Users/athena/CLionProjects/Glutton_C6/gym.h
 
 /Users/athena/CLionProjects/Glutton_C6/main.c
 gym.h

@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Glutton_C6.dir/statistics.c.o"
   "CMakeFiles/Glutton_C6.dir/add.c.o"
   "CMakeFiles/Glutton_C6.dir/increase_room.c.o"
+  "CMakeFiles/Glutton_C6.dir/Register.c.o"
   "Glutton_C6.pdb"
   "Glutton_C6"
 )

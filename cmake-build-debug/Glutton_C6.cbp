@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/athena/CLionProjects/Glutton_C6/Register.c">
+			<Option target="Glutton_C6"/>
+		</Unit>
 		<Unit filename="/Users/athena/CLionProjects/Glutton_C6/UI.c">
 			<Option target="Glutton_C6"/>
 		</Unit>

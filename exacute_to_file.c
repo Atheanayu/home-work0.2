@@ -5,7 +5,9 @@
 
 
 void _arr_init(){
+    int p;
     size_t len;
+    char c;
     char ID[40];
     char litter[40];
     FILE * fpc = fopen(FILE_COS_PATH,"r");
@@ -47,12 +49,15 @@ void _arr_init(){
         fscanf(fps,"ID:%s\n",(site[i])->ID);
         fscanf(fps,"region:%s\n",(site[i])->region);
         fscanf(fps,"sport:%s\n",(site[i])->sport);
-        while(fgetc(fps)!=':')
-            ;
-        fgets((site[i]->intro),100,fps);
-        len = strlen(site[i]->intro);
-        site[i]->intro[len-1] = '\0';
+        fscanf(fps,"intro:");
+//        fgets((site[i]->intro),INTRO_LEN,fps);
+//        len = strlen(site[i]->intro);
+//        site[i]->intro[len-1] = '\0';
 //        fscanf(fps,"intro:%s\n",(site[i])->intro);
+        for(p = 0;(c=(char)getc(fps))!='\n';p++){
+            site[i]->intro[p] = c;
+        }
+        site[i]->intro[p] = '\0';
         fscanf(fps,"enter_age:%d\n",&((site[i])->enter_age));
         fscanf(fps,"rent:%lf\n",&((site[i])->rent));
         fscanf(fps,"total_profit:%lf\n",&((site[i])->total_profit));
@@ -171,7 +176,7 @@ void _arr_init(){
     fclose(fps);
 }
 
-void write_to_file(){
+void _write_to_file(){
     FILE * fpa = fopen(FILE_ADM_PATH,"w");
     for(int j = 0;j<adm_size;j++){
         fprintf(fpa,"#\n");
@@ -187,8 +192,9 @@ void write_to_file(){
         fprintf(fpa,"e_mail:%s\n",admin[j]->e_mail);
         fprintf(fpa,"sex:%s\n",admin[j]->sex);
         fprintf(fpa,"phone_num:%s\n",admin[j]->phone_num);
-        fprintf(fpa,"site_info_len:%s\n",admin[j]->site_info_len);
+        fprintf(fpa,"site_info_len:%d\n",admin[j]->site_info_len);
     }
+    fclose(fpa);
     FILE * fpr = fopen(FILE_RENT_PATH,"w");
     for(int j = 0;j<rent_size;j++){
         fprintf(fpr,"#\n");
@@ -197,7 +203,7 @@ void write_to_file(){
         fprintf(fpr,"Appoint_ID:%s\n",rent[j]->Appoint_ID);
         fprintf(fpr,"start_time:%02d:%02d\n",rent[j]->start_time[0],rent[j]->start_time[1]);
         fprintf(fpr,"end_time:%02d:%02d\n",rent[j]->end_time[0],rent[j]->end_time[1]);
-        fprintf(fpr,"appoint_time:%d:%02d:%02d:%02d:%02d:%02d\n",rent[j]->appoint_time[0],rent[j]->appoint_time[1],
+        fprintf(fpr,"appoint_time:%d:%02d:%02d:%02d:%02d\n",rent[j]->appoint_time[0],rent[j]->appoint_time[1],
                 rent[j]->appoint_time[2],rent[j]->appoint_time[3],rent[j]->appoint_time[4]);
         fprintf(fpr,"start_date:%d:%02d:%02d\n",rent[j]->start_date[0],rent[j]->start_date[1],rent[j]->start_date[2]);
         fprintf(fpr,"price:%.2f\n",rent[j]->price);
@@ -205,5 +211,61 @@ void write_to_file(){
         fprintf(fpr,"gender:%s\n",rent[j]->gender);
         fprintf(fpr,"age:%d\n",rent[j]->age);
         fprintf(fpr,"is_complete:%d\n",rent[j]->is_complete);
+    }
+    fclose(fpr);
+    FILE * fps = fopen(FILE_SITE_PATH,"w");
+    for(int j= 0;j<site_size;j++){
+        fprintf(fps,"#\n");
+        fprintf(fps,"rent_info:\n");
+        for(int i = 0;i<site[j]->rent_info_len;i++){
+            fprintf(fps,"-%s\n",site[j]->rent_info[i]->Appoint_ID);
+        }
+        fprintf(fps,"~\n");
+        fprintf(fps,"admin_info:%s\n",site[j]->admin_info->ID);
+        fprintf(fps,"ID:%s\n",site[j]->ID);
+        fprintf(fps,"region:%s\n",site[j]->region);
+        fprintf(fps,"sport:%s\n",site[j]->sport);
+        fprintf(fps,"intro:%s\n",site[j]->intro);
+        fprintf(fps,"enter_age:%d\n",site[j]->enter_age);
+        fprintf(fps,"rent:%.2f\n",site[j]->rent);
+        fprintf(fps,"total_profit:%.2f\n",site[j]->total_profit);
+        fprintf(fps,"order_num:%d\n",site[j]->order_num);
+        fprintf(fps,"rent_info_len:%d\n",site[j]->rent_info_len);
+    }
+    fclose(fps);
+    FILE * fpc = fopen(FILE_COS_PATH,"w");
+    for(int j = 0;j<cus_size;j++){
+        fprintf(fpc,"#\n");
+        fprintf(fpc,"rent_info:\n");
+        for(int i = 0;i<customer[j]->rent_info_len;i++){
+            fprintf(fpc,"-%s\n",customer[j]->rent_info[i]->Appoint_ID);
+        }
+        fprintf(fpc,"~\n");
+        fprintf(fpc,"ID:%s\n",customer[j]->ID);
+        fprintf(fpc,"name:%s\n",customer[j]->name);
+        fprintf(fpc,"phone_num:%s\n",customer[j]->phone_num);
+        fprintf(fpc,"key:%s\n",customer[j]->key);
+        fprintf(fpc,"e_mail:%s\n",customer[j]->e_mail);
+        fprintf(fpc,"sex:%s\n",customer[j]->sex);
+        fprintf(fpc,"region:%s\n",customer[j]->region);
+        fprintf(fpc,"balance:%.2f\n",customer[j]->balance);
+        fprintf(fpc,"age:%d\n",customer[j]->age);
+        fprintf(fpc,"default_num:%d\n",customer[j]->default_num);
+        fprintf(fpc,"rent_info_len:%d\n",customer[j]->default_num);
+    }
+    fclose(fpc);
+}
+void free_all(){
+    for(int i = 0;i<site_size;i++){
+        free(site[i]);
+    }
+    for(int i = 0;i<rent_size;i++){
+        free(rent[i]);
+    }
+    for(int i = 0;i<cus_size;i++){
+        free(customer[i]);
+    }
+    for(int i = 0;i<adm_size;i++){
+        free(admin[i]);
     }
 }

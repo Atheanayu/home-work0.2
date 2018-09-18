@@ -29,7 +29,7 @@
 #define VENUE_NAME_LEN 20
 #define SEX_LEN 10
 #define REGION_LEN 20
-#define SPORT_LEN 10
+#define SPORT_LEN 20
 
 extern int cus_size;
 extern int adm_size;
@@ -116,13 +116,15 @@ extern SiteInfo ** site;
 extern RentalInfo ** rent;
 static int start_time[5]={2018,9,10,0,0};
 
-void _arr_init();/* read msg from file, and create an array which has the msg */
+void _arr_init();/* read msg from file, and create an array which has the msg *//* 成功 */
+void _write_to_file();/* 成功 */
+void free_all();/* 成功 */
 
 /* search relevant function  */
-CustomerInfo * search_cus_ID(char * ID);
-AdminInfo * search_adm_ID(char * ID);
-RentalInfo * search_rent_ID(char * ID);
-SiteInfo * search_site_ID(char * ID);
+CustomerInfo * search_cus_ID(char * ID);/* 成功 */
+AdminInfo * search_adm_ID(char * ID);/* 成功 */
+RentalInfo * search_rent_ID(char * ID);/* 成功 */
+SiteInfo * search_site_ID(char * ID);/* 成功 */
 
 /* compare dependence */
 int _comp_cus_age_down(const void *,const void *);
@@ -133,10 +135,10 @@ int _comp_site_order_down(const void *a,const void *b);
 int _comp_site_order_up(const void *a,const void *b);
 int _comp_site_profit_down(const void *a,const void *b);
 int _comp_site_profit_up(const void *a,const void *b);
-int _comp_site_untilize_down(const void *a,const void *b);/* 未 */
-int _comp_site_untilize_up(const void *a,const void *b);/* 未 */
-int _comp_female_sport(const void *a,const void *b);/* 未 */
-int _comp_male_sport(const void *a,const void *b);/* 未 */
+int _comp_site_untilize_down(const void *a,const void *b);/* 成功 */
+int _comp_site_untilize_up(const void *a,const void *b);/* 成功 */
+int _comp_female_sport(const void *a,const void *b);/* 成功 */
+int _comp_male_sport(const void *a,const void *b);/* 成功 */
 
 /* menu */
 void main_menu(void);
@@ -157,41 +159,41 @@ void sort_menu(void);
 
 /* be friendly to user */
 int _get_int (void);
-int _check_phone(char * phone_num);/* 未检测 */
-int _check_password(char * password);/* 未检测 */
-int _check_ID(char * ID);/* 未检测 */
-int _check_mail(char * mail);/* 未检测 */
-int _check_24_hour(int* starttime);/* 未检测 */
+int _check_phone(char * phone_num);/* 成功,在函数内部输出，错误原因 */
+int _check_password(char * password);/* 成功，在函数内部输出，错误原因 */
+int _check_ID(char * ID);/* 成功，在函数内部输出，错误原因 */
+int _check_mail(char * mail);/* 成功，在函数内部输出，错误原因 */
+int _check_24_hour(int* starttime);/* 成功，不在函数内部输出错误原因 */
+int _recheck_cusID(char ID[]);/* 成功 */
+int _check_age(int age);/* 成功 */
+int _recheck_admID(char ID[]);/* 成功 */
+int _check_venue_name(char venue_name[]);/* 成功 */
+int _recheck_sitID(char ID[]);/* 成功 */
+SiteInfo * _recheck_site_sport(char * sport);/* 成功 */
+int _check_7_day(int * startdate);/* 成功 */
+int _check_time_mode(char * time);/* 成功 */
 
 /* choice relevant */
-CustomerInfo * Login_user();/* 未检测 */
-AdminInfo * Login_adm();/* 未检测 */
-int revise_customer_info(CustomerInfo * cos);/* 未检测 */
-int revise_admin_info(AdminInfo * adm);/* 未检测 */
-void cus_show_orders(CustomerInfo * cos);/* 未检测 */
-void adm_show_orders(AdminInfo * adm);/* 未检测 */
-void adm_show_site(AdminInfo * adm);/* 未 */
+CustomerInfo * Login_user();/* 成功 */
+AdminInfo * Login_adm();/* 成功 */
+int revise_customer_info(CustomerInfo * cos);/* 成功 */
+int revise_admin_info(AdminInfo * adm);/* 成功 */
+void cus_show_orders(CustomerInfo * cos);/* 成功 */
+void adm_show_orders(AdminInfo * adm);/* 成功 */
+void adm_show_site(AdminInfo * adm);/* 成功 */
 
 
 /* statistics */
-float _get_utilize_rate(SiteInfo * siteInfo);/* 未检测 */
-void get_cur_time(int * cur_time);/* 已检测 */
-double get_venue_profit(AdminInfo * adminInfo);/* 未检测 */
-int get_female_sport_num(SiteInfo * siteInfo);/* 未检测 */
-int get_male_sport_num(SiteInfo * siteInfo);/* 未检测 */
-void analyse_age(AdminInfo * adminInfo);/* 未 */
-int _get_time_len(int * starttime,int * endtime);/* 未 */
+float _get_utilize_rate(SiteInfo * siteInfo);/* 成功 */
+void get_cur_time(int * cur_time);/* 成功 */
+double get_venue_profit(AdminInfo * adminInfo);/* 成功，前提是，site的总营业额，在取消订单时候处理了 */
+int get_female_sport_num(SiteInfo * siteInfo);/* 成功 */
+int get_male_sport_num(SiteInfo * siteInfo);/* 成功 */
+void analyse_age(AdminInfo * adminInfo);/* 成功 *//* analyse there are how many people in different time interval  */
+int _get_time_len(int * starttime,int * endtime);/* 成功 */
 
-/* not do */
-int add_site();
-int add_rent();
-int add_cus();
-int add_admin();
-void inter_search();
-int cancel_order();/* 未检测，没调用 */
-void free_all();
 
-/* 扩容函数 */
+/* 扩容函数，未检测，问题不大 */
 void _increase_adm_room();
 void _increase_cus_room();
 void _increase_site_room();
@@ -199,3 +201,22 @@ void _increase_rent_room();
 void _increase_adm_site_room(AdminInfo * adm);
 void _increase_site_rent_room(SiteInfo * siteInfo);
 void _increase_cus_rent_room(CustomerInfo * cus);
+
+/* UI */
+void inter_main();/* 完成 */
+void inter_cus_login(CustomerInfo * customerInfo);/* 完成 */
+void inter_adm_login(AdminInfo * adminInfo);/* 完成 */
+void reserve_management(AdminInfo * adminInfo);/* 完成 */
+void count_order(AdminInfo * adminInfo);/* 完成 */
+void site_management(AdminInfo * adminInfo);/* 完成 */
+void Register();/* 完成 */
+
+/* Register */
+void RegisterCostumer();/* 成功 */
+void RegisterAdmin();/* 成功 */
+void RegisterSite(AdminInfo * adm);/* 成功 */
+void RegisterRent(CustomerInfo * cus);/* 成功 */
+
+/* not do */
+void inter_search();
+int cancel_order();/* 未检测，没调用 */

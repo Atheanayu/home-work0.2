@@ -4,12 +4,12 @@ float _get_utilize_rate(SiteInfo * siteInfo){
     int time[5];
     int time_len=0,total_time_len;
     for(int i = 0;i<siteInfo->rent_info_len;i++){
-        time_len +=siteInfo->rent_info[i]->start_time[0]-siteInfo->rent_info[i]->end_time[0];
-        if(siteInfo->rent_info[i]->start_time[1]!=siteInfo->rent_info[i]->end_time[1])
+        time_len +=(siteInfo->rent_info[i]->end_time[0]-siteInfo->rent_info[i]->start_time[0]);
+        if(siteInfo->rent_info[i]->start_time[1]<siteInfo->rent_info[i]->end_time[1])
             time_len += 1;
     }
     get_cur_time(time);
-    total_time_len = (time[0]-start_time[0])*365*24+(time[1]-start_time[1])*30*24+(time[2]-start_time[2])*24+time[1]-start_time[1];
+    total_time_len = (time[0]-start_time[0])*365*16+(time[1]-start_time[1])*30*16+(time[2]-start_time[2])*16+time[1]-start_time[1];
     return (float)time_len/(float)total_time_len;
 
 }
@@ -69,8 +69,8 @@ void analyse_age(AdminInfo * adminInfo){
     }
 }
 int _get_time_len(int * starttime,int * endtime){
-    int len = starttime[0]-endtime[0];
-    if(starttime[1]!=endtime[1])
+    int len = endtime[0]-starttime[0];
+    if(starttime[1]<endtime[1])
         len ++;
     return len;
 }
