@@ -14,7 +14,8 @@ void user_func_menu(void){					//1.1
     printf("*                1.  Query and Reserve		        *\n");
     printf("*                2.  Modify personal information    *\n");
     printf("*                3.  View my order                  *\n");
-    printf("*                4.  Log off                        *\n");
+    printf("*                4.  Cancel my order                *\n");
+    printf("*                5.  Log off                        *\n");
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }

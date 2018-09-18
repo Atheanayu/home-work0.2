@@ -9,7 +9,7 @@
 #define FILE_RENT_PATH "RentalInfo.txt"
 #define FILE_SITE_PATH "SiteInfo.txt"
 
-#define ID_LEN 30
+#define ID_LEN 40
 #define NAME_LEN 20
 #define PHONE_NUM_LEN 12
 #define KEY_LEN 20
@@ -125,6 +125,7 @@ CustomerInfo * search_cus_ID(char * ID);/* 成功 */
 AdminInfo * search_adm_ID(char * ID);/* 成功 */
 RentalInfo * search_rent_ID(char * ID);/* 成功 */
 SiteInfo * search_site_ID(char * ID);/* 成功 */
+AdminInfo * search_venue_name(char * name);/* 未测试 */
 
 /* compare dependence */
 int _comp_cus_age_down(const void *,const void *);
@@ -152,9 +153,9 @@ void adm_modify_menu();
 void register_menu();
 void search_menu(void);
 void category_menu(void);
-void book_venue_menu();
-void book_sport_menu();
-void _private_book_region_menu();
+//void book_venue_menu();
+//void book_sport_menu();
+//void _private_book_region_menu();
 void sort_menu(void);
 
 /* be friendly to user */
@@ -172,6 +173,8 @@ int _recheck_sitID(char ID[]);/* 成功 */
 SiteInfo * _recheck_site_sport(char * sport);/* 成功 */
 int _check_7_day(int * startdate);/* 成功 */
 int _check_time_mode(char * time);/* 成功 */
+char get_choice(void);/* 没测试 */
+char get_first (void);/* 没测试 */
 
 /* choice relevant */
 CustomerInfo * Login_user();/* 成功 */
@@ -181,7 +184,8 @@ int revise_admin_info(AdminInfo * adm);/* 成功 */
 void cus_show_orders(CustomerInfo * cos);/* 成功 */
 void adm_show_orders(AdminInfo * adm);/* 成功 */
 void adm_show_site(AdminInfo * adm);/* 成功 */
-
+void show_site();/* 成功 */
+void show_adm_site(AdminInfo * adm);/* 未测试 */
 
 /* statistics */
 float _get_utilize_rate(SiteInfo * siteInfo);/* 成功 */
@@ -210,6 +214,9 @@ void reserve_management(AdminInfo * adminInfo);/* 完成 */
 void count_order(AdminInfo * adminInfo);/* 完成 */
 void site_management(AdminInfo * adminInfo);/* 完成 */
 void Register();/* 完成 */
+void inter_category_search(CustomerInfo * cus);/* 完成,未测试 */
+void inter_search(CustomerInfo * cus);/* 未完成 */
+void inter_sort_search();/* 完成，未测试 */
 
 /* Register */
 void RegisterCostumer();/* 成功 */
@@ -218,5 +225,4 @@ void RegisterSite(AdminInfo * adm);/* 成功 */
 void RegisterRent(CustomerInfo * cus);/* 成功 */
 
 /* not do */
-void inter_search();
-int cancel_order();/* 未检测，没调用 */
+int cancel_order(CustomerInfo *cus);/* 未检测，没调用 */

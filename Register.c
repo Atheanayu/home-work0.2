@@ -139,9 +139,11 @@ void RegisterSite(AdminInfo * adm){
     sit->admin_info = adm;
     sit->order_num = 0;
     sit->total_profit = 0.00;
+    if(adm->site_info_len%SITE_INFO_LEN==0)
+        _increase_adm_site_room(adm);
     adm->site_info[adm->site_info_len] = sit;
     adm->site_info_len++;
-    printf("Please follow the instructions to start registering your account:\n");
+    printf("Please follow the instructions to start:\n");
     do{
         printf("请设置您新场地的ID号（6-10个字符与数字的组合）：\n");          /* 注册ID */
         scanf("%s",sit->ID);
@@ -181,6 +183,10 @@ void RegisterRent(CustomerInfo* cus) {
     int num=0;
     SiteInfo *temp;
     RentalInfo *rentalInfo = (RentalInfo *) malloc(sizeof(RentalInfo));
+    if(cus->rent_info_len%RENT_INFO_LEN==0)
+        _increase_cus_rent_room(cus);
+    cus->rent_info[cus->rent_info_len] = rentalInfo;
+    cus->rent_info_len++;
     rentalInfo->cus_info = cus;
     rentalInfo->is_complete = 0;
     rentalInfo->age = cus->age;
@@ -188,7 +194,7 @@ void RegisterRent(CustomerInfo* cus) {
     get_cur_time(rentalInfo->appoint_time);
     sprintf(rentalInfo->Appoint_ID,"%s|%d:%02d:%02d:%02d:%02d",cus->ID,rentalInfo->appoint_time[0],rentalInfo->appoint_time[1],
             rentalInfo->appoint_time[2],rentalInfo->appoint_time[3],rentalInfo->appoint_time[4]);
-    printf("Please follow the instructions to start registering:\n");
+    printf("Please follow the instructions to start:\n");
     while (1) {
         printf("please enter the site you want to reserve\n");
         scanf("%s", ID);
@@ -199,6 +205,10 @@ void RegisterRent(CustomerInfo* cus) {
             printf("can not find the site, please enter again\n");
     }
     rentalInfo->site_info = temp;
+    if(temp->rent_info_len%RENT_INFO_LEN==0)
+        _increase_site_rent_room(temp);
+    temp->rent_info[cus->rent_info_len] = rentalInfo;
+    temp->rent_info_len++;
     while(1){
         printf("please enter the start date:(int form: yyyy:mm:dd)\n");
         scanf("%s",s);

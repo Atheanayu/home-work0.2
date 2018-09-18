@@ -16,5 +16,8 @@ int main() {
     rent = (RentalInfo **)malloc(sizeof(RentalInfo*)*RENT_LEN);
     site = (SiteInfo **)malloc(sizeof(SiteInfo*)*SITE_LEN);
     _arr_init();
+    inter_main();
+    _write_to_file();
+    free_all();
     return 0;
 }

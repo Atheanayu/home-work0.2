@@ -15,6 +15,13 @@ AdminInfo * search_adm_ID(char * ID){
     }
     return NULL;
 }
+AdminInfo * search_venue_name(char * name){
+    for(int i = 0;i<adm_size;i++){
+        if(strcmp(name,(admin[i])->venue_name)==0)
+            return admin[i];
+    }
+    return NULL;
+}
 RentalInfo * search_rent_ID(char * ID){
     for(int i = 0;i<rent_size;i++){
         if(strcmp(ID,(rent[i])->Appoint_ID)==0){

@@ -12,6 +12,26 @@ int _get_int (void) {
     getchar();
     return input;
 }
+char get_choice(void) {
+    char ch;
+
+    ch = get_first();
+    while (ch != 'y' && ch != 'n')
+    {
+        printf ("Please respond with y or n.\n");
+        ch = get_first();
+    }
+    return ch;
+}
+char get_first (void) {
+    char ch;
+    char * s;
+    ch = (char)getchar();
+    fgets(s,100,stdin);
+//    getchar();
+    return ch;
+}
+
 
 int _check_phone(char * phone_num){
     if(strlen(phone_num)!=11){
@@ -105,14 +125,12 @@ int _check_mail(char * mail){
 int _check_24_hour(int* startdate){
     int cur_time[5];
     get_cur_time(cur_time);
-    if(startdate[0]==cur_time[0] && startdate[1]==cur_time[1]){
-        if(startdate[2] > cur_time[2])
-            return 0;
-        else
-            return -1;
-    }else{
-        return 0;/* can cancel order */
-    }
+    if(startdate[0]>cur_time[0]) return 0;
+    if(startdate[0]<cur_time[0]) return -1;
+    if(startdate[1]>cur_time[1]) return 0;
+    if(startdate[1]<cur_time[1]) return -1;
+    if (startdate[2] > cur_time[2]) return 0;
+    else return -1;
 }
 int _check_7_day(int * startdate){
     int len;

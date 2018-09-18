@@ -279,7 +279,7 @@ int revise_admin_info(AdminInfo * adm){
 }
 
 void cus_show_orders(CustomerInfo * cos){
-    for(int i = 0;cos->rent_info[i]!=NULL;i++){
+    for(int i = 0;i<cos->rent_info_len;i++){
         printf("site_ID\tAppoint_ID\t\t\t\tAppoint_time\t\tstart_date\tstart_time\tend_time\tprice\tis_intime\n");
         printf("%s\t%s\t",cos->rent_info[i]->site_info->ID,cos->rent_info[i]->Appoint_ID);
         printf("%d:%02d:%02d:%02d:%02d\t ",cos->rent_info[i]->appoint_time[0],cos->rent_info[i]->appoint_time[1],cos->rent_info[i]->appoint_time[2],
@@ -311,12 +311,31 @@ void adm_show_site(AdminInfo * adm){
         printf("\n");
         printf("Site Info:\n");
         printf("ID\t\tvenue name\tregion\tsport\tenter age\trent\tintroduction\n");
-        printf("%s\t%s\t%s\t%s\t%d\t\t\t%.2f\t%s",adm->site_info[i]->ID,adm->venue_name,adm->site_info[i]->region,adm->site_info[i]->sport,
+        printf("%s\t%s\t%s\t%s\t%d\t\t\t%.2f\t%s\n",adm->site_info[i]->ID,adm->venue_name,adm->site_info[i]->region,adm->site_info[i]->sport,
                 adm->site_info[i]->enter_age,adm->site_info[i]->rent,adm->site_info[i]->intro);
     }
 }
 
-int cancel_order(){
+void show_site(){
+    for(int i = 0;i<site_size;i++){
+        printf("\n");
+        printf("Site Info:\n");
+        printf("ID\t\tvenue name\tregion\tsport\tenter age\trent\tintroduction\n");
+        printf("%s\t%s\t%s\t%s\t%d\t\t\t%.2f\t%s\n",site[i]->ID,site[i]->admin_info->venue_name,site[i]->region,site[i]->sport,
+               site[i]->enter_age,site[i]->rent,site[i]->intro);
+    }
+}
+void show_adm_site(AdminInfo * adm){
+    for(int i = 0;i<adm->site_info_len;i++){
+        printf("\n");
+        printf("Site Info:\n");
+        printf("ID\t\tvenue name\tregion\tsport\tenter age\trent\tintroduction\n");
+        printf("%s\t%s\t%s\t%s\t%d\t\t\t%.2f\t%s\n",adm->site_info[i]->ID,adm->venue_name,adm->site_info[i]->region,adm->site_info[i]->sport,
+               adm->site_info[i]->enter_age,adm->site_info[i]->rent,adm->site_info[i]->intro);
+    }
+}
+
+int cancel_order(CustomerInfo* cus){
     char ID[ID_LEN];
     int cur_time[5];
     RentalInfo * r=NULL;
@@ -324,7 +343,7 @@ int cancel_order(){
     printf("please enter the order ID you want to cancel:\n");
     scanf("%s",ID);
     getchar();
-    for(int i = 0;i<RENT_LEN;i++){
+    for(int i = 0;i<rent_size;i++){
         if(strcmp(ID,rent[i]->Appoint_ID)==0)
             r = rent[i];
     }
@@ -332,10 +351,13 @@ int cancel_order(){
         printf("sorry,can not find your order\n");
         return -1;
     }
-    if(_check_24_hour(r->start_time)==0){
+    if(_check_24_hour(r->start_date)==0){
+        if(r->is_complete==1 || r->is_complete==-1)
+            printf("sorry,your order has been cancel or used");
         r->is_complete = -1;
         r->site_info->order_num--;
         r->site_info->total_profit-=_get_time_len(r->start_time,r->end_time)*r->site_info->rent;
+        cus->balance += _get_time_len(r->start_time,r->end_time)*r->site_info->rent;
         printf("cancel your order successfully\n");
     } else{
         printf("your order can only be canceled in 24h");

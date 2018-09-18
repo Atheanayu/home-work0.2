@@ -10,7 +10,7 @@ int _comp_site_rent_down(const void *a,const void *b){
     return ((*((SiteInfo**)b))->rent - (*((SiteInfo**)a))->rent>0)? 1:-1;
 }
 int _comp_site_rent_up(const void *a,const void *b){
-    return ((*((SiteInfo**)a))->rent - (*((SiteInfo**)b))->rent>0)? -1:1;
+    return ((*((SiteInfo**)b))->rent - (*((SiteInfo**)a))->rent>0)? -1:1;
 }
 int _comp_site_order_down(const void *a,const void *b){
     return (*((SiteInfo**)b))->order_num - (*((SiteInfo**)a))->order_num;
