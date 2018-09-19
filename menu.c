@@ -1,6 +1,21 @@
+/* 版权说明：
+ * 1. 版权归本小组（余涵 夏雨琴 池晓威 康凯 张睿毅）所有
+ * 2. 只能用于学习和参考使用
+ * 3. 使用本品需经本小组全体成员同意，违者必究
+ *
+ * 版本号：2.0
+ *
+ * 生成日期：2018.9.18
+ *
+ * 作者：康凯
+ *
+ * 内容：该文件定义的函数用于打印菜单
+ * */
+
 #include "gym.h"
 
-void main_menu(void){	   					//1
+void main_menu(void)
+{	   					//1
     printf("****** Integrated Gymnasium Management System *******\n");
     printf("*                1.  User login				        *\n");
     printf("*                2.  Administrator login            *\n");
@@ -9,7 +24,8 @@ void main_menu(void){	   					//1
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void user_func_menu(void){					//1.1
+void user_func_menu(void)
+{					//1.1
     printf("******************* User Function *******************\n");
     printf("*                1.  Query and Reserve		        *\n");
     printf("*                2.  Modify personal information    *\n");
@@ -19,7 +35,8 @@ void user_func_menu(void){					//1.1
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void adm_func_menu(void){					//1.2
+void adm_func_menu(void)
+{					//1.2
     printf("************** Administrator Function ***************\n");
     printf("*                1.  Reserving management 		    *\n");
     printf("*                2.  Site management                *\n");
@@ -28,7 +45,8 @@ void adm_func_menu(void){					//1.2
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void reserve_management_menu(void){                   //1.2.1
+void reserve_management_menu(void)
+{                   //1.2.1
     printf("*************** Reserving Management ****************\n");
     printf("*                1.  Query historical order		    *\n");
     printf("*                2.  Count order                    *\n");
@@ -36,7 +54,8 @@ void reserve_management_menu(void){                   //1.2.1
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void count_order_menu(void){	 					//1.2.1.2
+void count_order_menu(void)
+{	 					//1.2.1.2
     printf("******************* Count Order *********************\n");
     printf("*                1. Sort by quantity 				*\n");
     printf("*                2. Sort by turnover 				*\n");
@@ -48,7 +67,8 @@ void count_order_menu(void){	 					//1.2.1.2
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void site_management_menu(){						//1.2.2
+void site_management_menu()
+{						//1.2.2
     printf("***************** Site Management *******************\n");
     printf("*                1. Query all the sites 			*\n");
     printf("*                2. Add a new site 					*\n");
@@ -56,7 +76,8 @@ void site_management_menu(){						//1.2.2
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void cos_modify_menu(){
+void cos_modify_menu()
+{
     printf("***************** cos_modify ************************\n");
     printf("*                1. phone number        			*\n");
     printf("*                2. key         					*\n");
@@ -66,7 +87,8 @@ void cos_modify_menu(){
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void adm_modify_menu(){
+void adm_modify_menu()
+{
     printf("***************** adm_modify ************************\n");
     printf("*                1. phone number        			*\n");
     printf("*                2. key         					*\n");
@@ -75,7 +97,8 @@ void adm_modify_menu(){
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void register_menu(){						//1.3
+void register_menu()
+{						//1.3
     printf("********************* Register **********************\n");
     printf("*                1. User                 			*\n");
     printf("*                2. Administrator 					*\n");
@@ -83,7 +106,8 @@ void register_menu(){						//1.3
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void search_menu(void){
+void search_menu(void)
+{
     printf("******************* SEARCH MODE *********************\n");
     printf("*                1.  BY Site ID				        *\n");
     printf("*                2.  BY CATEGORY                    *\n");
@@ -92,7 +116,8 @@ void search_menu(void){
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void category_menu(void){
+void category_menu(void)
+{
     printf("******************** CATEGORY ***********************\n");
     printf("*                1.  VENUE					        *\n");
     printf("*                2.  SPORT			                *\n");
@@ -101,8 +126,8 @@ void category_menu(void){
     printf("*****************************************************\n");
     printf("Please choose the category: \n");
 }
-void book_venue_menu(){
-
+void book_venue_menu()
+{
     printf("********************* VENUE *************************\n");
     printf("*                1.  CP_CENTER				        *\n");
     printf("*                2.  HD_CENTER                      *\n");
@@ -111,8 +136,8 @@ void book_venue_menu(){
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void book_sport_menu(){
-
+void book_sport_menu()
+{
     printf("********************* SPORT *************************\n");
     printf("*                1.  SOCCER				            *\n");
     printf("*                2.  BASKETBALL                     *\n");
@@ -121,8 +146,8 @@ void book_sport_menu(){
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void book_region_menu(){
-
+void book_region_menu()
+{
     printf("********************* REGION ************************\n");
     printf("*                1.  BEI_CP				            *\n");
     printf("*                2.  BEI_HD		                    *\n");
@@ -131,7 +156,8 @@ void book_region_menu(){
     printf("*****************************************************\n");
     printf("Please enter your choice: \n");
 }
-void sort_menu(void){
+void sort_menu(void)
+{
     printf("********************** SORT *************************\n");
     printf("*                1.  RENT ↑				            *\n");
     printf("*                2.  RENT ↓                         *\n");

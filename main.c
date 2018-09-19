@@ -10,7 +10,8 @@ RentalInfo ** rent = NULL;
 SiteInfo ** site = NULL;
 
 
-int main() {
+int main()
+{
     customer = (CustomerInfo **)malloc(sizeof(CustomerInfo*)*CUS_LEN);
     admin = (AdminInfo **)malloc(sizeof(AdminInfo*)*ADM_LEN);
     rent = (RentalInfo **)malloc(sizeof(RentalInfo*)*RENT_LEN);

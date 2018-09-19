@@ -1,6 +1,25 @@
+/* 版权说明：
+ * 1. 版权归本小组（余涵 夏雨琴 池晓威 康凯 张睿毅）所有
+ * 2. 只能用于学习和参考使用
+ * 3. 使用本品需经本小组全体成员同意，违者必究
+ *
+ * 版本号：2.0
+ *
+ * 生成日期：2018.9.18
+ *
+ * 作者：夏雨琴 余涵
+ *
+ * 内容：该文件定义的函数主要用于注册
+ * */
 #include "gym.h"
-
-void RegisterCostumer(){
+/* 函数功能：用于顾客注册的交互
+ * 传入参数：void
+ * 返回值：void
+ * 调用关系：调用了一系列_check_ 函数检查用户输入的正确性
+ * 作者：夏雨琴
+ * */
+void RegisterCostumer()
+{
     int choice = 0;
     CustomerInfo *cus=(CustomerInfo *)malloc(sizeof(CustomerInfo));
     cus->rent_info = (RentalInfo **)malloc(sizeof(RentalInfo*)*RENT_INFO_LEN);
@@ -19,19 +38,23 @@ void RegisterCostumer(){
         scanf("%s",cus->key);                               /* 注册密码合法性 */
     }while(_check_password(cus->key)!=0);
     char CheckKey[KEY_LEN];
-    while(Compare!=0){
+    while(Compare!=0)
+    {
         printf("请重新确认您的密码:\n");                                 /* 重新确认密码 */
         scanf("%s",CheckKey);
         if((Compare=strcmp(cus->key,CheckKey))!=0)
             printf("sorry, the keys are not compatible,please enter again\n");
     }
-    while(1) {
+    while(1)
+    {
         printf("请输入您的性别：\n1、男\n2、女\n");                      /* 注册性别 */
         scanf("%d", &choice);
-        if(choice == 1){
+        if(choice == 1)
+        {
             strcpy(cus->sex,"male");
             break;
-        }else if(choice == 2){
+        }else if(choice == 2)
+        {
             strcpy(cus->sex,"female");
             break;
         }else
@@ -55,20 +78,21 @@ void RegisterCostumer(){
     cus->balance=0;
     int newchoice=0;
 //    char money[10];
-    while(newchoice!=1&&newchoice!=2){
+    while(newchoice!=1&&newchoice!=2)
+    {
         scanf("%d",&newchoice);
         switch(newchoice){
-            case 1:{
+            case 1:
                 printf("please enter the money you want to spend\n");
                 scanf("%lf",&cus->balance);
                 printf("您的当前余额为：%.2lf\n",cus->balance);
-                break;}
-            case 2:{
+                break;
+            case 2:
                 printf("您的当前余额为：%.2lf\n",cus->balance);
-                break;}
-            default:{
+                break;
+            default:
                 printf("请输入正确选项:\n");
-                break;}
+                break;
         }
     }
     if(cus_size % CUS_LEN==0)
@@ -76,7 +100,12 @@ void RegisterCostumer(){
     customer[cus_size] = cus;
     cus_size++;
 }
-
+/* 函数功能：用于与管理员的交互
+ * 传入参数：void
+ * 返回值：void
+ * 调用关系：调用了一系列的_check_函数，确保用户输入的正确性
+ * 作者：夏雨琴
+ * */
 void RegisterAdmin(){
     int choice;
     AdminInfo *CurrentAdmin=(AdminInfo *)malloc(sizeof(AdminInfo));
@@ -99,19 +128,23 @@ void RegisterAdmin(){
         scanf("%s",CurrentAdmin->key);                               /* 注册密码合法性 */
     }while(_check_password(CurrentAdmin->key)!=0);
     char CheckKey[KEY_LEN];
-    while(Compare!=0){
+    while(Compare!=0)
+    {
         printf("请重新确认您的密码:\n");                                 /* 重新确认密码 */
         scanf("%s",CheckKey);
         if((Compare=strcmp(CurrentAdmin->key,CheckKey))!=0)
             printf("sorry, the keys are not compatible,please enter again\n");
     }
-    while(1) {
+    while(1)
+    {
         printf("请输入您的性别：\n1、男\n2、女\n");                      /* 注册性别 */
         scanf("%d", &choice);
-        if(choice == 1){
+        if(choice == 1)
+        {
             strcpy(CurrentAdmin->sex,"male");
             break;
-        }else if(choice == 2){
+        }else if(choice == 2)
+        {
             strcpy(CurrentAdmin->sex,"female");
             break;
         }else
@@ -130,7 +163,14 @@ void RegisterAdmin(){
     admin[adm_size] = CurrentAdmin;
     adm_size++;
 }
-void RegisterSite(AdminInfo * adm){
+/* 函数功能：增加场地
+ * 传入参数：该增加的场地所属的管理员
+ * 返回值：void
+ * 调用关系：调用了一系列的_check_函数
+ * 作者：夏雨琴
+ * */
+void RegisterSite(AdminInfo * adm)
+{
     char s[40];
     SiteInfo * temp;
     SiteInfo *sit=(SiteInfo *)malloc(sizeof(SiteInfo));
@@ -147,7 +187,7 @@ void RegisterSite(AdminInfo * adm){
     do{
         printf("请设置您新场地的ID号（6-10个字符与数字的组合）：\n");          /* 注册ID */
         scanf("%s",sit->ID);
-        getchar();/* 检测ID合法性 */
+        getchar();                                                  /* 检测ID合法性 */
     }while(_check_ID(sit->ID)!=0||_recheck_sitID(sit->ID)!=0);
     printf("请设置您新场地所在区域:\n");
     scanf("%s",sit->region);
@@ -157,7 +197,8 @@ void RegisterSite(AdminInfo * adm){
     getchar();
     if((temp = _recheck_site_sport(sit->sport))!=NULL)
         strcpy(sit->intro,temp->intro);
-    else{
+    else
+    {
         printf("this is a new sport ,please enter its intro\n");
         fgets(s,100,stdin);
         s[strlen(s)-1]='\0';
@@ -167,7 +208,7 @@ void RegisterSite(AdminInfo * adm){
         printf("请设置您新场地的准入年龄：\n");
         scanf("%d",&(sit->enter_age));
         getchar();
-    }while(_check_age(sit->enter_age)==0);
+    }while(_check_age(sit->enter_age)==0);/* 检查年龄的合理性 */
     printf("请设置您新场地的租金：\n");
     scanf("%lf",&(sit->rent));
     getchar();
@@ -176,7 +217,14 @@ void RegisterSite(AdminInfo * adm){
     site[site_size] = sit;
     site_size++;
 }
-void RegisterRent(CustomerInfo* cus) {
+/* 函数功能：预定
+ * 传入参数：预定的顾客
+ * 返回值：void
+ * 函数调用：search_site_ID函数和一系列_check_函数
+ * 作者：余涵
+ * */
+void RegisterRent(CustomerInfo* cus)
+{
     int flag=0;
     char ID[40];
     char s[40];
@@ -195,13 +243,14 @@ void RegisterRent(CustomerInfo* cus) {
     sprintf(rentalInfo->Appoint_ID,"%s|%d:%02d:%02d:%02d:%02d",cus->ID,rentalInfo->appoint_time[0],rentalInfo->appoint_time[1],
             rentalInfo->appoint_time[2],rentalInfo->appoint_time[3],rentalInfo->appoint_time[4]);
     printf("Please follow the instructions to start:\n");
-    while (1) {
+    while (1) /* 查找想要预定的场地 */
+    {
         printf("please enter the site you want to reserve\n");
         scanf("%s", ID);
         getchar();
         if ((temp = search_site_ID(ID)) != NULL)
             break;
-        else
+        else/* 如果不能找到预定的场地，重新输入 */
             printf("can not find the site, please enter again\n");
     }
     rentalInfo->site_info = temp;
@@ -209,47 +258,54 @@ void RegisterRent(CustomerInfo* cus) {
         _increase_site_rent_room(temp);
     temp->rent_info[cus->rent_info_len] = rentalInfo;
     temp->rent_info_len++;
-    while(1){
+    while(1) /* 输入开始日期 */
+    {
         printf("please enter the start date:(int form: yyyy:mm:dd)\n");
         scanf("%s",s);
         getchar();
-        for(int i = 0;i<strlen(s);i++){
+        for(int i = 0;i<strlen(s);i++)/* 判断时间格式是否正确 */
+        {
             if(s[i]==':')
                 num ++;
-            else if(s[i]<'0'||s[i]>'9') {
+            else if(s[i]<'0'||s[i]>'9')
+            {
                 printf("wrong time mode\n");
                 flag = 1;
                 break;
             }
         }
         if(flag == 1) continue;
-        if(num != 2) {
+        if(num != 2)
+        {
             printf("wrong time mode\n");
             continue;
         }
         sscanf(s,"%d:%d:%d",&rentalInfo->start_date[0],&rentalInfo->start_date[1],&rentalInfo->start_date[2]);
-        if(rentalInfo->start_date[1]>12 || rentalInfo->start_date[2]>31) {
+        if(rentalInfo->start_date[1]>12 || rentalInfo->start_date[2]>31) /* 判断时间是否合理 */
+        {
             printf("wrong time\n");
             continue;
-        } else if(_check_7_day(rentalInfo->start_date)!=0) {
+        } else if(_check_7_day(rentalInfo->start_date)!=0) /* 检查是否是7天以后的订单 */
+        {
             printf("wrong time\n");
             continue;
         } else
             break;
     }
-    while(1){
+    while(1){/* 输入开始时间 */
         printf("please enter the start time:(in form hh:mm)\n");
         scanf("%s",s);
         getchar();
-        if(_check_time_mode(s)!=0) {
+        if(_check_time_mode(s)!=0) /* 检查时间模式是否正确 */
+        {
             printf("wrong time mode\n");
             continue;
-        } else{
+        } else
+        {
             sscanf(s,"%d:%d",&rentalInfo->start_time[0],&rentalInfo->start_time[1]);
-            if(rentalInfo->start_time[0]>22 || rentalInfo->start_time[0]<6 || rentalInfo->start_time[1]>60) {
-                printf("wrong time");
-                continue;
-            } else
+            if(rentalInfo->start_time[0]>22 || rentalInfo->start_time[0]<6 || rentalInfo->start_time[1]>60)
+                printf("wrong time");/* 判断时间是否合理 */
+            else
                 break;
         }
     }
@@ -257,14 +313,15 @@ void RegisterRent(CustomerInfo* cus) {
         printf("please enter the end time:(in form hh:mm)\n");
         scanf("%s",s);
         getchar();
-        if(_check_time_mode(s)!=0)
+        if(_check_time_mode(s)!=0)/* 检查时间模式是否正确 */
             printf("wrong time mode\n");
-        else{
+        else
+        {
             sscanf(s,"%d:%d",&rentalInfo->end_time[0],&rentalInfo->end_time[1]);
             if(rentalInfo->end_time[0]>22 || rentalInfo->end_time[0]<6 || rentalInfo->end_time[1]>60)
-                printf("wrong time\n");
+                printf("wrong time\n");/* 判断时间是否合理 */
             else if(rentalInfo->end_time[0]==22 && rentalInfo->end_time[1]!=0)
-                printf("wrong time\n");
+                printf("wrong time\n");/* 判断时间是否合理 */
             else
                 break;
         }
@@ -272,6 +329,6 @@ void RegisterRent(CustomerInfo* cus) {
     rentalInfo->is_intime = 0;
     if(rent_size == RENT_LEN)
         _increase_rent_room();
-    rent[rent_size] = rentalInfo;
-    rent_size++;
+    rent[rent_size] = rentalInfo;/* 数组中新增元素 */
+    rent_size++;/* 增加元素个数 */
 }
