@@ -476,7 +476,7 @@ int cancel_order(CustomerInfo* cus)
         printf("cancel your order successfully\n");
     } else
     {/* 不在24小时之外，发出错误信息，并返回 */
-        printf("your order can only be canceled in 24h");
+        printf("your order can only be canceled in 24h\n");
         return -1;
     }
     return 0;

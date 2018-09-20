@@ -86,9 +86,6 @@
 		<Unit filename="/Users/athena/CLionProjects/Glutton_C6/UI.c">
 			<Option target="Glutton_C6"/>
 		</Unit>
-		<Unit filename="/Users/athena/CLionProjects/Glutton_C6/add.c">
-			<Option target="Glutton_C6"/>
-		</Unit>
 		<Unit filename="/Users/athena/CLionProjects/Glutton_C6/choice_relevant.c">
 			<Option target="Glutton_C6"/>
 		</Unit>

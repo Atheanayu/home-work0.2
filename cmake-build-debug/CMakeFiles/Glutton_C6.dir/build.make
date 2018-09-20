@@ -273,33 +273,9 @@ CMakeFiles/Glutton_C6.dir/statistics.c.o.provides: CMakeFiles/Glutton_C6.dir/sta
 CMakeFiles/Glutton_C6.dir/statistics.c.o.provides.build: CMakeFiles/Glutton_C6.dir/statistics.c.o
 
 
-CMakeFiles/Glutton_C6.dir/add.c.o: CMakeFiles/Glutton_C6.dir/flags.make
-CMakeFiles/Glutton_C6.dir/add.c.o: ../add.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Glutton_C6.dir/add.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Glutton_C6.dir/add.c.o   -c /Users/athena/CLionProjects/Glutton_C6/add.c
-
-CMakeFiles/Glutton_C6.dir/add.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Glutton_C6.dir/add.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/athena/CLionProjects/Glutton_C6/add.c > CMakeFiles/Glutton_C6.dir/add.c.i
-
-CMakeFiles/Glutton_C6.dir/add.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Glutton_C6.dir/add.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/athena/CLionProjects/Glutton_C6/add.c -o CMakeFiles/Glutton_C6.dir/add.c.s
-
-CMakeFiles/Glutton_C6.dir/add.c.o.requires:
-
-.PHONY : CMakeFiles/Glutton_C6.dir/add.c.o.requires
-
-CMakeFiles/Glutton_C6.dir/add.c.o.provides: CMakeFiles/Glutton_C6.dir/add.c.o.requires
-	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/add.c.o.provides.build
-.PHONY : CMakeFiles/Glutton_C6.dir/add.c.o.provides
-
-CMakeFiles/Glutton_C6.dir/add.c.o.provides.build: CMakeFiles/Glutton_C6.dir/add.c.o
-
-
 CMakeFiles/Glutton_C6.dir/increase_room.c.o: CMakeFiles/Glutton_C6.dir/flags.make
 CMakeFiles/Glutton_C6.dir/increase_room.c.o: ../increase_room.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Glutton_C6.dir/increase_room.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Glutton_C6.dir/increase_room.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Glutton_C6.dir/increase_room.c.o   -c /Users/athena/CLionProjects/Glutton_C6/increase_room.c
 
 CMakeFiles/Glutton_C6.dir/increase_room.c.i: cmake_force
@@ -323,7 +299,7 @@ CMakeFiles/Glutton_C6.dir/increase_room.c.o.provides.build: CMakeFiles/Glutton_C
 
 CMakeFiles/Glutton_C6.dir/Register.c.o: CMakeFiles/Glutton_C6.dir/flags.make
 CMakeFiles/Glutton_C6.dir/Register.c.o: ../Register.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Glutton_C6.dir/Register.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Glutton_C6.dir/Register.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Glutton_C6.dir/Register.c.o   -c /Users/athena/CLionProjects/Glutton_C6/Register.c
 
 CMakeFiles/Glutton_C6.dir/Register.c.i: cmake_force
@@ -356,7 +332,6 @@ Glutton_C6_OBJECTS = \
 "CMakeFiles/Glutton_C6.dir/UI.c.o" \
 "CMakeFiles/Glutton_C6.dir/choice_relevant.c.o" \
 "CMakeFiles/Glutton_C6.dir/statistics.c.o" \
-"CMakeFiles/Glutton_C6.dir/add.c.o" \
 "CMakeFiles/Glutton_C6.dir/increase_room.c.o" \
 "CMakeFiles/Glutton_C6.dir/Register.c.o"
 
@@ -372,12 +347,11 @@ Glutton_C6: CMakeFiles/Glutton_C6.dir/menu.c.o
 Glutton_C6: CMakeFiles/Glutton_C6.dir/UI.c.o
 Glutton_C6: CMakeFiles/Glutton_C6.dir/choice_relevant.c.o
 Glutton_C6: CMakeFiles/Glutton_C6.dir/statistics.c.o
-Glutton_C6: CMakeFiles/Glutton_C6.dir/add.c.o
 Glutton_C6: CMakeFiles/Glutton_C6.dir/increase_room.c.o
 Glutton_C6: CMakeFiles/Glutton_C6.dir/Register.c.o
 Glutton_C6: CMakeFiles/Glutton_C6.dir/build.make
 Glutton_C6: CMakeFiles/Glutton_C6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable Glutton_C6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable Glutton_C6"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Glutton_C6.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -394,7 +368,6 @@ CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/menu.c.o.requires
 CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/UI.c.o.requires
 CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/choice_relevant.c.o.requires
 CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/statistics.c.o.requires
-CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/add.c.o.requires
 CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/increase_room.c.o.requires
 CMakeFiles/Glutton_C6.dir/requires: CMakeFiles/Glutton_C6.dir/Register.c.o.requires
 

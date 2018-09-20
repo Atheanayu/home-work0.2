@@ -1,6 +1,7 @@
 #
 site_info:
 -S00001
+-S00005
 ~
 ID:A10004
 name:Admin1
@@ -9,7 +10,7 @@ key:12342axss
 e_mail:heloo@163.com
 sex:male
 phone_num:12352637812
-site_info_len:1
+site_info_len:2
 #
 site_info:
 -S00003

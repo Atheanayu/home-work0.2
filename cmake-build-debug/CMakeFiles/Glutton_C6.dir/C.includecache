@@ -14,8 +14,6 @@ gym.h
 gym.h
 /Users/athena/CLionProjects/Glutton_C6/gym.h
 
-/Users/athena/CLionProjects/Glutton_C6/add.c
-
 /Users/athena/CLionProjects/Glutton_C6/choice_relevant.c
 gym.h
 /Users/athena/CLionProjects/Glutton_C6/gym.h
@@ -35,6 +33,8 @@ gym.h
 /Users/athena/CLionProjects/Glutton_C6/gym.h
 
 /Users/athena/CLionProjects/Glutton_C6/gym.h
+unistd.h
+-
 string.h
 -
 stdio.h

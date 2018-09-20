@@ -7,8 +7,6 @@ CMakeFiles/Glutton_C6.dir/Register.c.o: ../gym.h
 CMakeFiles/Glutton_C6.dir/UI.c.o: ../UI.c
 CMakeFiles/Glutton_C6.dir/UI.c.o: ../gym.h
 
-CMakeFiles/Glutton_C6.dir/add.c.o: ../add.c
-
 CMakeFiles/Glutton_C6.dir/choice_relevant.c.o: ../choice_relevant.c
 CMakeFiles/Glutton_C6.dir/choice_relevant.c.o: ../gym.h
 

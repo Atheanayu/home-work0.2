@@ -11,7 +11,7 @@
  *
  * 内容：该文件为程序的头文件部分，声明了程序所用到的函数、宏、变量
  * */
-
+#include <unistd.h>
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
@@ -120,6 +120,7 @@ extern AdminInfo ** admin;
 extern SiteInfo ** site;
 extern RentalInfo ** rent;
 
+//void welcome();
 /* 开业时间 */
 static int start_time[5]={2018,9,10,0,0};
 

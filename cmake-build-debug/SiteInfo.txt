@@ -1,7 +1,7 @@
 #
 rent_info:
--C10003|2018:09:12:12:10
--C10005|2018:09:10:11:11
+-C10005|2018:09:12:12:10
+-C10003|2018:09:10:11:11
 ~
 admin_info:A10004
 ID:S00001
@@ -17,7 +17,7 @@ rent_info_len:2
 rent_info:
 -C10003|2018:09:01:17:12
 ~
-admin_info:A10004
+admin_info:A10002
 ID:S00003
 region:BEI_HD
 sport:basketball
@@ -27,3 +27,16 @@ rent:12.34
 total_profit:24.68
 order_num:1
 rent_info_len:1
+#
+rent_info:
+~
+admin_info:A10004
+ID:S00005
+region:BEI_CP
+sport:soccer
+intro:a popular sport named soccer
+enter_age:10
+rent:10.00
+total_profit:0.00
+order_num:0
+rent_info_len:0

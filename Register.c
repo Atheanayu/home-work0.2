@@ -28,26 +28,26 @@ void RegisterCostumer()
     printf("Please follow the instructions to start registering:\n");
     int i=0,Compare=100;
     do{
-        printf("请设置您的ID号（6-10个字符与数字的组合）：\n");          /* 注册ID */
+        printf("please set your ID（6~10 words && consists of numbers & alpha）：\n");          /* 注册ID */
         scanf("%s",cus->ID);                       /* 检测ID合法性 */
     }while(_check_ID(cus->ID)!= 0||_recheck_cusID(cus->ID)==1);
-    printf("请设置您的用户名：\n");                                      /* 注册用户名 */
+    printf("please set your name：\n");                                      /* 注册用户名 */
     scanf("%s",cus->name);
     do{
-        printf("请设置您的密码：\n");
+        printf("please set your key：\n");
         scanf("%s",cus->key);                               /* 注册密码合法性 */
     }while(_check_password(cus->key)!=0);
     char CheckKey[KEY_LEN];
     while(Compare!=0)
     {
-        printf("请重新确认您的密码:\n");                                 /* 重新确认密码 */
+        printf("please reset your key to make sure:\n");                                 /* 重新确认密码 */
         scanf("%s",CheckKey);
         if((Compare=strcmp(cus->key,CheckKey))!=0)
             printf("sorry, the keys are not compatible,please enter again\n");
     }
     while(1)
     {
-        printf("请输入您的性别：\n1、男\n2、女\n");                      /* 注册性别 */
+        printf("please enter your gender：\n1、male\n2、female\n");                      /* 注册性别 */
         scanf("%d", &choice);
         if(choice == 1)
         {
@@ -61,20 +61,20 @@ void RegisterCostumer()
             printf("wrong choice\n");
     }
     do{
-        printf("请输入您的电话号码：\n");                                /* 注册电话号码 */
+        printf("please enter your phone number：\n");                                /* 注册电话号码 */
         scanf("%s",cus->phone_num);              /* 检测电话号码的合法性 */
     }while(_check_phone(cus->phone_num)!=0);
     do{
-        printf("请输入您的邮箱地址：\n");                                /* 注册邮箱 */
+        printf("please enter your mail：\n");                                /* 注册邮箱 */
         scanf("%s",cus->e_mail);                   /* 检测邮箱的合法性 */
     }while(_check_mail(cus->e_mail)!=0);
     do{
-        printf("请输入您的年龄：\n");                                    /* 注册年龄 */
+        printf("please enter your age：\n");                                    /* 注册年龄 */
         scanf("%d",&cus->age);                      /* 检测年龄的真实性 */
     }while(_check_age(cus->age)==0);
     printf("please enter your region:\n");
     scanf("%s",cus->region);
-    printf("请问您是否要充值余额？\n1、是\n2、否\n");                  /* 选择充值服务 */
+    printf("do you want to recharge？\n1、yes\n2、no\n");                  /* 选择充值服务 */
     cus->balance=0;
     int newchoice=0;
 //    char money[10];
@@ -85,13 +85,13 @@ void RegisterCostumer()
             case 1:
                 printf("please enter the money you want to spend\n");
                 scanf("%lf",&cus->balance);
-                printf("您的当前余额为：%.2lf\n",cus->balance);
+                printf("your balance：%.2lf\n",cus->balance);
                 break;
             case 2:
-                printf("您的当前余额为：%.2lf\n",cus->balance);
+                printf("your balance：%.2lf\n",cus->balance);
                 break;
             default:
-                printf("请输入正确选项:\n");
+                printf("wrong choice,please enter again:\n");
                 break;
         }
     }
@@ -114,30 +114,30 @@ void RegisterAdmin(){
     printf("Please follow the instructions to start registering:\n");
     int i=0,Compare=100;
     do{
-        printf("请设置您的ID号（6-10个字符与数字的组合）：\n");          /* 注册ID */
+        printf("please set your ID(6~10 words && consists of numbers & alpha)：\n");          /* 注册ID */
         scanf("%s",CurrentAdmin->ID);                       /* 检测ID合法性 */
     }while(_check_ID(CurrentAdmin->ID)!=0||_recheck_admID(CurrentAdmin->ID)!=0);
     do{
-        printf("请输入您新注册的场馆ID（6-10个字符与数字的组合）：\n");
+        printf("please set the venue ID（6~10 words && consists of numbers & alpha）：\n");
         scanf("%s",CurrentAdmin->venue_name);
     }while(_check_ID(CurrentAdmin->venue_name)!=0||_check_venue_name(CurrentAdmin->venue_name)==0);
-    printf("请设置您的用户名：\n");                                      /* 注册用户名 */
+    printf("please set your name：\n");                                      /* 注册用户名 */
     scanf("%s",CurrentAdmin->name);
     do{
-        printf("请设置您的密码：\n");
+        printf("please set your key：\n");
         scanf("%s",CurrentAdmin->key);                               /* 注册密码合法性 */
     }while(_check_password(CurrentAdmin->key)!=0);
     char CheckKey[KEY_LEN];
     while(Compare!=0)
     {
-        printf("请重新确认您的密码:\n");                                 /* 重新确认密码 */
+        printf("please enter the key again to make sure:\n");                                 /* 重新确认密码 */
         scanf("%s",CheckKey);
         if((Compare=strcmp(CurrentAdmin->key,CheckKey))!=0)
             printf("sorry, the keys are not compatible,please enter again\n");
     }
     while(1)
     {
-        printf("请输入您的性别：\n1、男\n2、女\n");                      /* 注册性别 */
+        printf("please enter your gender：\n1、male\n2、female\n");                      /* 注册性别 */
         scanf("%d", &choice);
         if(choice == 1)
         {
@@ -151,11 +151,11 @@ void RegisterAdmin(){
             printf("wrong choice\n");
     }
     do{
-        printf("请输入您的电话号码：\n");                                /* 注册电话号码 */
+        printf("please enter your phone number：\n");                                /* 注册电话号码 */
         scanf("%s",CurrentAdmin->phone_num);              /* 检测电话号码的合法性 */
     }while(_check_phone(CurrentAdmin->phone_num)!=0);
     do{
-        printf("请输入您的邮箱地址：\n");                                /* 注册邮箱 */
+        printf("please enter your mail：\n");                                /* 注册邮箱 */
         scanf("%s",CurrentAdmin->e_mail);                /* 检测邮箱的合法性 */
     }while(_check_mail(CurrentAdmin->e_mail	)!=0);
     if(adm_size % ADM_LEN==0)
@@ -185,14 +185,14 @@ void RegisterSite(AdminInfo * adm)
     adm->site_info_len++;
     printf("Please follow the instructions to start:\n");
     do{
-        printf("请设置您新场地的ID号（6-10个字符与数字的组合）：\n");          /* 注册ID */
+        printf("please set the site ID (6~10 words && consists of numbers & alpha)：\n");          /* 注册ID */
         scanf("%s",sit->ID);
         getchar();                                                  /* 检测ID合法性 */
     }while(_check_ID(sit->ID)!=0||_recheck_sitID(sit->ID)!=0);
-    printf("请设置您新场地所在区域:\n");
+    printf("please set the rigion:\n");
     scanf("%s",sit->region);
     getchar();
-    printf("请设置您新场地的运动:\n");
+    printf("which kind of sport is this site used for:\n");
     scanf("%s",sit->sport);
     getchar();
     if((temp = _recheck_site_sport(sit->sport))!=NULL)
@@ -205,11 +205,11 @@ void RegisterSite(AdminInfo * adm)
         strcpy(sit->intro,s);
     }
     do{
-        printf("请设置您新场地的准入年龄：\n");
+        printf("please set the enter age：\n");
         scanf("%d",&(sit->enter_age));
         getchar();
     }while(_check_age(sit->enter_age)==0);/* 检查年龄的合理性 */
-    printf("请设置您新场地的租金：\n");
+    printf("please set the rent：\n");
     scanf("%lf",&(sit->rent));
     getchar();
     if(site_size%SITE_LEN==0)
@@ -229,6 +229,7 @@ void RegisterRent(CustomerInfo* cus)
     char ID[40];
     char s[40];
     int num=0;
+    double price;
     SiteInfo *temp;
     RentalInfo *rentalInfo = (RentalInfo *) malloc(sizeof(RentalInfo));
     if(cus->rent_info_len%RENT_INFO_LEN==0)
@@ -260,6 +261,7 @@ void RegisterRent(CustomerInfo* cus)
     temp->rent_info_len++;
     while(1) /* 输入开始日期 */
     {
+        num = 0;
         printf("please enter the start date:(int form: yyyy:mm:dd)\n");
         scanf("%s",s);
         getchar();
@@ -325,6 +327,17 @@ void RegisterRent(CustomerInfo* cus)
             else
                 break;
         }
+    }
+    if(cus->default_num==3){
+        printf("your default number is 3,can not rent\n");
+        return;
+    }
+    price = _get_time_len(rentalInfo->start_time,rentalInfo->end_time)*temp->rent;
+    if(cus->balance>price)
+        cus->balance -= price;
+    else{
+        printf("your balance is not enough, can not rent\n");
+        return;
     }
     rentalInfo->is_intime = 0;
     if(rent_size == RENT_LEN)

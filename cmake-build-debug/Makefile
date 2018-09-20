@@ -177,33 +177,6 @@ UI.c.s:
 	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/UI.c.s
 .PHONY : UI.c.s
 
-add.o: add.c.o
-
-.PHONY : add.o
-
-# target to build an object file
-add.c.o:
-	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/add.c.o
-.PHONY : add.c.o
-
-add.i: add.c.i
-
-.PHONY : add.i
-
-# target to preprocess a source file
-add.c.i:
-	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/add.c.i
-.PHONY : add.c.i
-
-add.s: add.c.s
-
-.PHONY : add.s
-
-# target to generate assembly for a file
-add.c.s:
-	$(MAKE) -f CMakeFiles/Glutton_C6.dir/build.make CMakeFiles/Glutton_C6.dir/add.c.s
-.PHONY : add.c.s
-
 choice_relevant.o: choice_relevant.c.o
 
 .PHONY : choice_relevant.o
@@ -462,9 +435,6 @@ help:
 	@echo "... UI.o"
 	@echo "... UI.i"
 	@echo "... UI.s"
-	@echo "... add.o"
-	@echo "... add.i"
-	@echo "... add.s"
 	@echo "... choice_relevant.o"
 	@echo "... choice_relevant.i"
 	@echo "... choice_relevant.s"

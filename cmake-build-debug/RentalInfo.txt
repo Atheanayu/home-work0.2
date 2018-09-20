@@ -14,7 +14,7 @@ is_complete:1
 #
 cus_info:C10005
 site_info:S00001
-Appoint_ID:C10003|2018:09:12:12:10
+Appoint_ID:C10005|2018:09:12:12:10
 start_time:10:30
 end_time:11:30
 appoint_time:2018:09:12:12:10
@@ -27,7 +27,7 @@ is_complete:0
 #
 cus_info:C10003
 site_info:S00001
-Appoint_ID:C10005|2018:09:10:11:11
+Appoint_ID:C10003|2018:09:10:11:11
 start_time:13:30
 end_time:15:20
 appoint_time:2018:09:10:11:11

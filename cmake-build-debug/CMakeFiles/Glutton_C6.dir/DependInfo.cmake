@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/athena/CLionProjects/Glutton_C6/Register.c" "/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles/Glutton_C6.dir/Register.c.o"
   "/Users/athena/CLionProjects/Glutton_C6/UI.c" "/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles/Glutton_C6.dir/UI.c.o"
-  "/Users/athena/CLionProjects/Glutton_C6/add.c" "/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles/Glutton_C6.dir/add.c.o"
   "/Users/athena/CLionProjects/Glutton_C6/choice_relevant.c" "/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles/Glutton_C6.dir/choice_relevant.c.o"
   "/Users/athena/CLionProjects/Glutton_C6/exacute_to_file.c" "/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles/Glutton_C6.dir/exacute_to_file.c.o"
   "/Users/athena/CLionProjects/Glutton_C6/friend_to_user.c" "/Users/athena/CLionProjects/Glutton_C6/cmake-build-debug/CMakeFiles/Glutton_C6.dir/friend_to_user.c.o"

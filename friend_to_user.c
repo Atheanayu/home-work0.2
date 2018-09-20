@@ -7,7 +7,7 @@
  *
  * 生成日期：2018.9.18
  *
- * 作者：夏雨琴 池晓威 康凯
+ * 作者：夏雨琴 池晓威 康凯 余涵
  *
  * 内容：该文件定义的函数是用于各种检查，保证用户友好
  * */
@@ -196,6 +196,8 @@ int _check_mail(char * mail)
             return -1;
         }
     }
+    if(!at_flag) return -1;
+    if(!dot_flag) return -1;
     return 0;
 }
 /* 函数功能：检查是否超过24小时
@@ -356,3 +358,25 @@ SiteInfo * _recheck_site_sport(char * sport)
     }
     return NULL;
 }
+/* 函数功能：在开头一个单词一个单词的打印
+ * 传入参数：void
+ * 返回值：void
+ * 调用关系：无
+ * 注：这个使用的是非标准库函数，只能在unix系统下运行
+ * 作者：余涵
+ * */
+//void welcome(){
+//    char arr[100] = {"welcome to our system, your satisfaction is the goal we pursue\n "};
+//    char temp[30];
+//    int j= 0,i;
+//    for(i = 0;i<strlen(arr);i++){
+//        temp[j] = arr[i];
+//        j++;
+//        if(arr[i]==' '){
+//            temp[j+1] = '\0';
+//            write(STDOUT_FILENO,temp,(size_t)j);
+//            sleep(1);
+//            j = 0;
+//        }
+//    }
+//}
