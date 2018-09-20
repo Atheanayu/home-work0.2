@@ -11,42 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c40e814a-4036-499d-bfad-f64e649ef3ef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/add.c.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/Register.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/Register.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/UI.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/UI.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/choice_relevant.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/choice_relevant.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/exacute_to_file.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/exacute_to_file.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/friend_to_user.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/friend_to_user.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/increase_room.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/increase_room.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/main.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/menu.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/menu.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/search.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/search.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/statistics.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/statistics.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/tool.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/tool.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Glutton_C6" afterPath="$PROJECT_DIR$/cmake-build-debug/Glutton_C6" />
+    <list default="true" id="c40e814a-4036-499d-bfad-f64e649ef3ef" name="Default" comment="$PROJECT_DIR$">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gym.h.gch" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Register.c" afterPath="$PROJECT_DIR$/Register.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/choice_relevant.c" afterPath="$PROJECT_DIR$/choice_relevant.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/AdminInfo.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/AdminInfo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Glutton_C6.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CustomerInfo.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CustomerInfo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Glutton_C6.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Glutton_C6.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/RentalInfo.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/RentalInfo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SiteInfo.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/SiteInfo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/friend_to_user.c" afterPath="$PROJECT_DIR$/friend_to_user.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gym.h" afterPath="$PROJECT_DIR$/gym.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UI.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UI.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UI.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="4785">
               <caret line="319" column="27" lean-forward="false" selection-start-line="319" selection-start-column="27" selection-end-line="319" selection-end-column="27" />
               <folding />
             </state>
@@ -118,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminInfo.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminInfo.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/AdminInfo.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -163,6 +130,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Atheanayu &lt;34648216+atheanayu@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -299,23 +271,23 @@
       <updated>1537065399794</updated>
       <workItem from="1537065401500" duration="11129000" />
       <workItem from="1537085076516" duration="124344000" />
-      <workItem from="1537431764312" duration="2453000" />
+      <workItem from="1537431764312" duration="3174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137926000" />
+    <option name="totallyTimeSpent" value="138647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20840065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20840065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2173315" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2173315" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22833562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -356,6 +328,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="/Users/athena/CLionProjects/Glutton_C6" />
+    <option name="LAST_COMMIT_MESSAGE" value="/Users/athena/CLionProjects/Glutton_C6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -639,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="319" column="27" lean-forward="false" selection-start-line="319" selection-start-column="27" selection-end-line="319" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/choice_relevant.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -667,6 +635,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4785">
+          <caret line="319" column="27" lean-forward="false" selection-start-line="319" selection-start-column="27" selection-end-line="319" selection-end-column="27" />
           <folding />
         </state>
       </provider>
